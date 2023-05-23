@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/companyemployees/{id}', [CompanyController::class, 'getEmployeesOfCompany']);
+Route::post('/companyemployees', [CompanyController::class, 'addEmployee']);
+Route::put('/companyemployee/{id}', [CompanyController::class, 'updateEmployee']);
+Route::delete('/companyemployee/{id}', [CompanyController::class, 'deleteEmployee']);
 
